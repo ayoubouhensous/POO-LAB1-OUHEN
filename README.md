@@ -27,5 +27,11 @@ for (int i = 0; i < numStudents; i++) {
     grades[i] = sc.nextFloat();
 }
 
-And then I will sort the grades and display the results.
+
+Next, we use the Arrays.sort() method to sort the grades in ascending order and display them.
+Arrays.sort(grades);
+System.out.println("Sorted student grades:");
+for (int i = 0; i < numStudents; i++) {
+    System.out.println(grades[i]);
+}
 
