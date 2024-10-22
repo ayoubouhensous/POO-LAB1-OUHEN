@@ -27,10 +27,7 @@ for (int i = 0; i < numStudents; i++) {
     grades[i] = sc.nextFloat();
 }
 
+ed
 
 
 
-
-
-
-#### 1. Sorting and Displaying Grades  
