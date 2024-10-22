@@ -1,4 +1,4 @@
-# TP1 : Les tableaux et les chaines de caractères
+# TP1 : Arrays and strings
 
 This repository contains four Java exercises that focus on different programming concepts. The first exercise is about managing student grades, the second deals with conjugating first-group French verbs, the third focuses on string manipulation, and the last counts the occurrences of letters in a string. Each exercise includes code snippets and explanations to help you understand how the tasks are performed.
 
@@ -17,7 +17,6 @@ This project focuses on the implementation of arrays and strings in Java. It con
    - [Exercise 3: Managing Strings](#exercise-3-managing-strings)
    - [Exercise 4: Counting Letter Occurrences](#exercise-4-counting-letter-occurrences)
 6. [Conclusion](#Conclusion)
-7. [License](#license)
 
 ### Introduction
 
