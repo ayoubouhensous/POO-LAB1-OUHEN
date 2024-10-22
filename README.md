@@ -15,11 +15,11 @@ This exercise involves writing a Java program that allows the user to input stud
 
 #### 1. Sorting and Displaying Grades  
 The program begins by prompting the user to input the number of students and their respective grades.
-
+```java
 Scanner sc = new Scanner(System.in);
 System.out.println("Enter the number of students:");
 int numStudents = sc.nextInt();
-
+```
 float[] grades = new float[numStudents];
 for (int i = 0; i < numStudents; i++) {
     System.out.println("Enter the grade for student " + (i + 1) + ":");
