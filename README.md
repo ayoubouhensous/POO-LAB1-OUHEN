@@ -16,7 +16,7 @@ This project focuses on the implementation of arrays and strings in Java. It con
    - [Exercise 2: Conjugating French Verbs](#exercise-2-conjugating-french-verbs)
    - [Exercise 3: Managing Strings](#exercise-3-managing-strings)
    - [Exercise 4: Counting Letter Occurrences](#exercise-4-counting-letter-occurrences)
-6. [Contributing](#contributing)
+6. [Conclusion](#Conclusion)
 7. [License](#license)
 
 ### Introduction
