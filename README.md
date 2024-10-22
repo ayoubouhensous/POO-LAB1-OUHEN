@@ -100,6 +100,112 @@ for (float grade : grades) {
 System.out.println("Number of students with the grade " + gradeToFind + ": " + count);
 ```
 
+### Exercise 2: Conjugating French Verbs
+This exercise focuses on developing a Java program that conjugates regular French verbs from the first group (those ending in "er", except for "aller"). The program first checks if the verb belongs to this group and then conjugates it for all singular and plural pronouns.
+
+#### 1. Verifying the Verb
+The program prompts the user to input a verb and verifies whether it belongs to the first group.
+```java
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a verb to conjugate:");
+String verb = sc.nextLine().toLowerCase();
+
+String root = verb.substring(0, verb.length() - 2);
+String ending = verb.substring(verb.length() - 2);
+
+if (ending.equals("er") && !verb.equals("aller")) {
+    // Proceed with conjugation
+} else {
+    System.out.println("The verb is not a first-group verb.");
+}
+```
+#### 2. Conjugating the Verb
+If the verb is valid, we concatenate the root with the appropriate endings for each pronoun.
+```java
+String[] pronouns = {"je", "tu", "il", "nous", "vous", "ils"};
+String[] endings = {"e", "es", "e", "ons", "ez", "ent"};
+
+for (int i = 0; i < pronouns.length; i++) {
+    System.out.println(pronouns[i] + " " + root + endings[i]);
+}
+```
+
+### Exercise 3: Managing Strings
+This task consists of a Java program offering a menu for the user to enter a string, display it, reverse it, or count the number of words.
+
+#### 1. Displaying the Menu
+The program displays a menu with several options for string manipulation:
+```java
+public static void menu() {
+    System.out.println("Menu:");
+    System.out.println("1. Enter a string");
+    System.out.println("2. Display the string");
+    System.out.println("3. Reverse the string");
+    System.out.println("4. Count words in the string");
+    System.out.println("0. Exit");
+}
+```
+
+#### 2. Reversing the String
+We reverse the string using the StringBuilder class and display the result.
+```java
+public static void reverseString(String str) {
+    if (str.isEmpty()) {
+        System.out.println("No string entered.");
+    } else {
+        String reversed = new StringBuilder(str).reverse().toString();
+        System.out.println("Reversed string: " + reversed);
+    }
+}
+```
+
+#### 3. Counting Words
+To count the words, we split the string based on spaces and output the number of words.
+```java
+public static void countWords(String str) {
+    if (str.isEmpty()) {
+        System.out.println("No string entered.");
+    } else {
+        String[] words = str.trim().split("\\s+");
+        System.out.println("Word count: " + words.length);
+    }
+}
+```
+
+### Exercise 4: Counting Letter Occurrences
+In this final exercise, the program counts the number of occurrences of each letter in the input string. The string is converted to lowercase before counting.
+
+#### 1. Counting the Letters
+We iterate through the string and update a counter for each letter:
+```java
+for (char c : str.toCharArray()) {
+    if (c >= 'a' && c <= 'z') {
+        occurrences[c - 'a']++;
+    }
+}
+```
+#### 1. Displaying Results
+After processing the string, the program displays the number of occurrences for each letter that appears.
+```java
+for (int i = 0; i < occurrences.length; i++) {
+    if (occurrences[i] > 0) {
+        char letter = (char) ('a' + i);
+        System.out.println(letter + " appears " + occurrences[i] + " times.");
+    }
+}
+
+```
+### Conclusion
+In this lab, we explored the core concepts of arrays and strings in Java. Through various tasks, from sorting student grades to manipulating and analyzing strings, we learned how these data structures are essential tools in the development of efficient Java applications.
+
+
+
+
+
+
+
+
+
 
 
 
