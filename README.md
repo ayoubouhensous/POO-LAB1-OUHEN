@@ -27,7 +27,5 @@ for (int i = 0; i < numStudents; i++) {
     grades[i] = sc.nextFloat();
 }
 
-ed
-
-
+And then I will sort the grades and display the results.
 
