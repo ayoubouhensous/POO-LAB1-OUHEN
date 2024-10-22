@@ -27,7 +27,8 @@ for (int i = 0; i < numStudents; i++) {
     grades[i] = sc.nextFloat();
 }
 
-Assure-toi d'utiliser trois backticks au début et à la fin de ton bloc de code. Après avoir fermé le bloc, tu pourras écrire tout le texte que tu souhaites.
+
+fe
 
 
 
