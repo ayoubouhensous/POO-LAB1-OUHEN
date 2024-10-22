@@ -36,12 +36,8 @@ Understanding these data structures is key to solving many programming problems,
 1. Clone the repository:
    ```bash
    git clone https://github.com/ayoubouhensous/POO-LAB1.git
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/ayoubouhensous/POO-LAB1.git
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/ayoubouhensous/POO-LAB1.git
+2. Open the project in IntelliJ IDEA.
+3. Ensure that you have JDK 11 or higher installed.
 
 
 ## Usage
@@ -59,7 +55,6 @@ The program begins by prompting the user to input the number of students and the
 Scanner sc = new Scanner(System.in);
 System.out.println("Enter the number of students:");
 int numStudents = sc.nextInt();
-```
 float[] grades = new float[numStudents];
 for (int i = 0; i < numStudents; i++) {
     System.out.println("Enter the grade for student " + (i + 1) + ":");
@@ -68,9 +63,52 @@ for (int i = 0; i < numStudents; i++) {
 ```
 
 Next, we use the Arrays.sort() method to sort the grades in ascending order and display them.
+```java
 Arrays.sort(grades);
 System.out.println("Sorted student grades:");
 for (int i = 0; i < numStudents; i++) {
     System.out.println(grades[i]);
 }
+```
+
+#### 2. Calculating the Average Grade
+To compute the average, we sum all the grades and divide by the number of students.
+```java
+float total = 0;
+for (float grade : grades) {
+    total += grade;
+}
+System.out.println("The average grade is: " + total / numStudents);
+```
+#### 3. Finding the Maximum and Minimum Grades
+The highest and lowest grades are found by accessing the last and first elements of the sorted array, respectively.
+```java
+System.out.println("The highest grade is: " + grades[numStudents - 1]);
+System.out.println("The lowest grade is: " + grades[0]);
+```
+#### 4. Counting Students with a Specific Grade
+The user can enter a grade, and the program will count how many students received that grade.
+```java
+System.out.println("Enter the grade to search for:");
+float gradeToFind = sc.nextFloat();
+int count = 0;
+for (float grade : grades) {
+    if (grade == gradeToFind) {
+        count++;
+    }
+}
+System.out.println("Number of students with the grade " + gradeToFind + ": " + count);
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
