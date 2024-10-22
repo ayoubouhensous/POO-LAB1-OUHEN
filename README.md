@@ -10,3 +10,21 @@ Strings, on the other hand, are used to represent sequences of characters, and a
 
 Understanding these data structures is key to solving many programming problems, as they are the building blocks of numerous algorithms. In this lab, we explored different exercises that demonstrate the power and versatility of arrays and strings in Java programming.
 
+### Exercise 1: Managing Student Grades  
+This exercise involves writing a Java program that allows the user to input student grades, sort them, and then calculate useful statistics, such as the average grade, the highest and lowest grades, and the number of students achieving a specific grade.
+
+#### 1. Sorting and Displaying Grades  
+The program begins by prompting the user to input the number of students and their respective grades.
+
+```java
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number of students:");
+int numStudents = sc.nextInt();
+
+float[] grades = new float[numStudents];
+for (int i = 0; i < numStudents; i++) {
+    System.out.println("Enter the grade for student " + (i + 1) + ":");
+    grades[i] = sc.nextFloat();
+}
+
+
