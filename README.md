@@ -26,15 +26,9 @@ for (int i = 0; i < numStudents; i++) {
     System.out.println("Enter the grade for student " + (i + 1) + ":");
     grades[i] = sc.nextFloat();
 }
-java```
 
+Assure-toi d'utiliser trois backticks au début et à la fin de ton bloc de code. Après avoir fermé le bloc, tu pourras écrire tout le texte que tu souhaites.
 
-Next, we use the Arrays.sort() method to sort the grades in ascending order and display them.
-Arrays.sort(grades);
-System.out.println("Sorted student grades:");
-for (int i = 0; i < numStudents; i++) {
-    System.out.println(grades[i]);
-}
 
 
 
