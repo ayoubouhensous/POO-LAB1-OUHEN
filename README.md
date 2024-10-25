@@ -36,7 +36,7 @@ Understanding these data structures is key to solving many programming problems,
    ```bash
    git clone https://github.com/ayoubouhensous/POO-LAB1.git
 2. Open the project in IntelliJ IDEA.
-3. Ensure that you have JDK 11 or higher installed.
+3. Ensure that you have JDK 17 or higher installed.
 
 
 ## Usage
