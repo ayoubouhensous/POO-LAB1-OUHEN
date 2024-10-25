@@ -34,7 +34,7 @@ Understanding these data structures is key to solving many programming problems,
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ayoubouhensous/POO-LAB1.git
+   git clone https://github.com/ayoubouhensous/POO-LAB1-OUHEN
 2. Open the project in IntelliJ IDEA.
 3. Ensure that you have JDK 17 or higher installed.
 
