@@ -1,4 +1,4 @@
-# TP2: Collections in Java
+# TP4: Collections in Java
 
 This practical assignment explores the different collections available in Java, specifically **Lists**, **Maps**, and **Sets**. Collections are essential data structures that make it easy to manage groups of objects. In this assignment, we will complete several exercises to understand how to manipulate these collections effectively.
 
