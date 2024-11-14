@@ -82,9 +82,6 @@ In this operation, we use the reduce() method to find the employee with the high
 #### 6.Concatenate All Employee Names Using reduce
 The goal here is to concatenate the names of all employees into a single string. We use the reduce() method again, but this time the binary operator concatenates two employee names at a time, resulting in a single string that contains the names of all employees.
 
-### Exercise 3: Set Manipulation
-This exercise involves managing student groups using the Set interface. A HashSet is a collection that does not allow duplicates, making it ideal for handling groups where each student must be unique.
-
 
 ## Conclusion
 These exercises have provided a practical introduction to the power of Java Streams and functional programming techniques for manipulating collections of data. By working with lists of words and employees, we have explored various operations such as filtering, transforming, and aggregating data.
