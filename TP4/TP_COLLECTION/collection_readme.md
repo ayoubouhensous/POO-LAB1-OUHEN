@@ -38,7 +38,7 @@ Usage
 Each exercise is encapsulated in a Java class with a main method. To run an exercise, simply execute the corresponding class in your IDE.
 
 ## Exercises
-### Exercise 1: List Manipulation (Product List)
+### Exercise 1: List Manipulation
 This exercise involves writing a Java program to manage a list of products using the List interface (ArrayList).
 
 #### 1.Creating the Product List
@@ -56,7 +56,7 @@ Update the information of an existing product by accessing its index and updatin
 #### 5Searching for a Product by Name
 Allow the user to search for a product based on its name. Use a loop to check if the entered name matches a product in the list.
 
-### Exercise 2: Managing Student Grades (Map)
+### Exercise 2: Map Manipulation
 This exercise focuses on using a HashMap to store and manage student grades. The key is the student's name, and the value is their grade.
 
 #### 1.Creating the HashMap
@@ -77,7 +77,7 @@ The user can enter a grade, and the program will check if this grade is present 
 #### 6.Displaying Data
 Use a forEach loop with a lambda expression to display each student and their grade.
 
-### Exercise 3: Managing Student Groups with Sets
+### Exercise 3: Set Manipulation
 This exercise involves managing student groups using the Set interface (HashSet).
 
 #### 1.Creating Student Groups
