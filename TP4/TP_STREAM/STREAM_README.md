@@ -61,7 +61,7 @@ First, each word is converted into a list of characters. Then, these lists are f
 This operation involves taking each word and transforming it into a string formatted as "Name - Index", where Index is the position of the word in the original list. We can use the IntStream.range() to generate indices, and then use map() to format each word along with its index.
 
 
-### Exercise 2: Employee List Operations
+### Exercise 2: Manipulating Employees with Streams
 his exercise involves managing a list of employees, where each employee has a name, department, and salary. The goal is to perform various operations that aggregate, filter, and manipulate the data of the employee list.
 
 #### 1.Calculate the Total Salary of All Employees Using mapToDouble and sum
