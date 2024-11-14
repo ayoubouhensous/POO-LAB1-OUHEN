@@ -34,7 +34,7 @@ In this assignment, we will explore these concepts through three practical exerc
 2. Open the project in IntelliJ IDEA.
 3. Ensure that JDK 17 or higher is installed.
 4. Build the project to verify there are no errors.
-Usage
+## Usage
 Each exercise is encapsulated in a Java class with a main method. To run an exercise, simply execute the corresponding class in your IDE.
 
 ## Exercises
