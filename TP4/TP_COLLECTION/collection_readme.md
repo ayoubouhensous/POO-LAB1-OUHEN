@@ -41,61 +41,61 @@ Each exercise is encapsulated in a Java class with a main method. To run an exer
 ### Exercise 1: List Manipulation (Product List)
 This exercise involves writing a Java program to manage a list of products using the List interface (ArrayList).
 
-#### Creating the Product List
+#### 1.Creating the Product List
 Define a Product class with attributes such as id, name, and price. Then, create an ArrayList to store objects of type Product.
 
-#### Adding and Removing Products
+#### 2.Adding and Removing Products
 Use the add() method to add Product objects to the list. Then, demonstrate how to remove a product from the list by its index using the remove() method.
 
-#### Displaying Products
+#### 3.Displaying Products
 Traverse the list using a for-each loop to display each product with its details (id, name, and price).
 
-#### Modifying a Product
+#### 4Modifying a Product
 Update the information of an existing product by accessing its index and updating its attributes.
 
-#### Searching for a Product by Name
+#### 5Searching for a Product by Name
 Allow the user to search for a product based on its name. Use a loop to check if the entered name matches a product in the list.
 
 ### Exercise 2: Managing Student Grades (Map)
 This exercise focuses on using a HashMap to store and manage student grades. The key is the student's name, and the value is their grade.
 
-#### Creating the HashMap
+#### 1.Creating the HashMap
 Initialize a HashMap that stores student names as keys and their grades as values.
 
-#### Adding and Updating Grades
+#### 2.Adding and Updating Grades
 Use the put() method to add grades and update a student's grade if they already exist in the HashMap.
 
-#### Deleting Grades
+#### 3.Deleting Grades
 Allow deletion of a student's grade using the remove() method.
 
-#### Calculating Statistics
+#### 4.Calculating Statistics
 Traverse the HashMap to calculate statistics such as the average, maximum, and minimum grades of students.
 
-#### Searching for a Specific Grade
+#### 5.Searching for a Specific Grade
 The user can enter a grade, and the program will check if this grade is present in the collection. Use the containsValue() method for this check.
 
-Displaying Data
+#### 6.Displaying Data
 Use a forEach loop with a lambda expression to display each student and their grade.
 
 ### Exercise 3: Managing Student Groups with Sets
 This exercise involves managing student groups using the Set interface (HashSet).
 
-#### Creating Student Groups
+#### 1.Creating Student Groups
 Define two HashSets named groupA and groupB, containing the names of students belonging to each group.
 
-#### Adding Students to Sets
+#### 2.Adding Students to Sets
 Add student names to the HashSet using the add() method. HashSets do not allow duplicates, so each student name is unique within a set.
 
-#### Finding Intersection of Groups
+#### 3.Finding Intersection of Groups
 Use the retainAll() method to display students present in both groups (intersection of sets).
 
-#### Union of Groups
+#### 4.Union of Groups
 To obtain the complete list of students from all groups, use the addAll() method, which combines the two sets without duplicates.
 
-#### Difference between Groups
+#### 5.Difference between Groups
 Use the removeAll() method to display students present in one group but not in the other (difference of sets).
 
-#### Displaying Results
+#### 6.Displaying Results
 Traverse each HashSet to display student names in a clear format.
 
 ## Conclusion
