@@ -9,7 +9,7 @@ Ce projet est une application de bureau développée en JavaFX qui permet de gé
 1. [Introduction](#introduction)
 2. [Technologies Utilisées](#technologies-utilisées)
 3. [Fonctionnalités](#fonctionnalités)
-4. [Installation](#installation)
+4. [Ui](#Ui)
 5. [Utilisation](#utilisation)
 6. [Conclusion](#conclusion)
 
@@ -50,4 +50,5 @@ JavaFX est une plateforme puissante pour créer des applications de bureau moder
    - Messages d'erreur et de confirmation pour guider l'utilisateur.
 
 ---
+## Ui
 
