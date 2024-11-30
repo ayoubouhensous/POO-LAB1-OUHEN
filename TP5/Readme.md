@@ -91,17 +91,20 @@ The `Department` class represents a department within the institution:
 ---
 ## Controller Documentation
 
-### MainController
+## MainController
 The `MainController` is responsible for managing the main application window and navigation:
 
 - **Features**:
   - Manages the main interface of the application.
   - Handles tab navigation between the `Professor` and `Department` views.
   - Uses a `TabPane` to organize the different views for a seamless user experience.
+  
+- **Methods**:
+  - `quitter()`: Exits the application.
 
 ---
 
-### ProfessorController
+## ProfessorController
 The `ProfessorController` handles operations related to professors:
 
 - **Features**:
@@ -112,9 +115,20 @@ The `ProfessorController` handles operations related to professors:
   - Search professors using specific keywords.
   - Assign professors to their respective departments.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state of the controller.
+  - `modifyProfessor()`: Initiates the modification process for a professor.
+  - `deleteProfessor()`: Deletes a selected professor from the system.
+  - `addProfessor()`: Adds a new professor based on user input.
+  - `affecterProfessor()`: Assigns a professor to a department.
+  - `onSearchClicked()`: Executes the search action for professors.
+  - `refreshProfessors()`: Refreshes the list of professors displayed.
+  - `getCurrentKeyword()`: Retrieves the current search keyword.
+  - `setCurrentKeyword()`: Sets the current search keyword.
+
 ---
 
-### DepartmentController
+## DepartmentController
 The `DepartmentController` is in charge of managing departments:
 
 - **Features**:
@@ -124,9 +138,17 @@ The `DepartmentController` is in charge of managing departments:
   - Delete departments from the system.
   - View the list of professors assigned to each department.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state of the department controller.
+  - `addDepartement()`: Adds a new department based on user input.
+  - `modifyDepartment()`: Modifies the details of an existing department.
+  - `deleteDepartment()`: Deletes a selected department from the system.
+  - `showProfessors()`: Displays the professors associated with the department.
+  - `refreshDepartement()`: Refreshes the list of departments displayed.
+
 ---
 
-### AddProfessorController
+## AddProfessorController
 The `AddProfessorController` manages the process of adding new professors:
 
 - **Features**:
@@ -134,9 +156,15 @@ The `AddProfessorController` manages the process of adding new professors:
   - Validates input fields such as name, email, phone, and department selection.
   - Saves the new professor record to the database.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for adding a professor.
+  - `setProfesseurController()`: Links the controller to the professor management logic.
+  - `handleAddProfessor()`: Handles the logic for adding a new professor.
+  - `handleCancel()`: Cancels the add operation and returns to the previous view.
+
 ---
 
-### ModifyProfessorController
+## ModifyProfessorController
 The `ModifyProfessorController` allows for updating the details of an existing professor:
 
 - **Features**:
@@ -144,9 +172,18 @@ The `ModifyProfessorController` allows for updating the details of an existing p
   - Allows modification of attributes such as name, email, phone, and department.
   - Updates the professor record in the database.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for modifying a professor.
+  - `loadDepartement()`: Loads the departments for selection.
+  - `populateFields()`: Populates the input fields with the current professor's data.
+  - `setProfesseur()`: Sets the selected professor for modification.
+  - `updateProfessorData()`: Updates the professor's details in the database.
+  - `handleModifyProfessor()`: Handles the modification action.
+  - `handleCancel()`: Cancels the modification process and returns to the previous view.
+
 ---
 
-### SearchProfessorController
+## SearchProfessorController
 The `SearchProfessorController` facilitates searching for professors based on specific criteria:
 
 - **Features**:
@@ -154,9 +191,18 @@ The `SearchProfessorController` facilitates searching for professors based on sp
   - Displays a filtered list of professors matching the search criteria.
   - Supports advanced search features (e.g., by department or recruitment date).
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for searching professors.
+  - `searchProfessors()`: Executes the search based on the entered criteria.
+  - `addActionButtons()`: Adds action buttons for modifying, deleting, or assigning professors.
+  - `handleModify()`: Initiates the modification of a selected professor.
+  - `handleDelete()`: Deletes a selected professor from the search results.
+  - `handleAssign()`: Assigns a selected professor to a department.
+  - `loadProf()`: Loads professor data for the search operation.
+
 ---
 
-### ListProfessorController
+## ListProfessorController
 The `ListProfessorController` handles the display of all professors in a tabular or list format:
 
 - **Features**:
@@ -164,9 +210,13 @@ The `ListProfessorController` handles the display of all professors in a tabular
   - Allows sorting and filtering options for better organization.
   - Supports pagination for large data sets.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for listing professors.
+  - `listProfessor()`: Retrieves and displays the list of all professors.
+
 ---
 
-### AddDepartementController
+## AddDepartementController
 The `AddDepartementController` is used to add new departments to the system:
 
 - **Features**:
@@ -174,9 +224,14 @@ The `AddDepartementController` is used to add new departments to the system:
   - Validates inputs before saving.
   - Saves the department record to the database.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for adding a department.
+  - `handleAddDepartement()`: Handles the logic for adding a new department.
+  - `handleCancel()`: Cancels the add operation and returns to the previous view.
+
 ---
 
-### ModifyDepartementController
+## ModifyDepartementController
 The `ModifyDepartementController` manages the modification of existing department details:
 
 - **Features**:
@@ -184,4 +239,149 @@ The `ModifyDepartementController` manages the modification of existing departmen
   - Updates the department information in the database.
   - Ensures that changes do not conflict with existing records.
 
+- **Methods**:
+  - `initialize()`: Sets up the initial state for modifying a department.
+  - `loadDepartment()`: Loads the current department details for editing.
+  - `updateDepartmentData()`: Updates the department's details in the database.
+  - `handleModifyDepartment()`: Handles the modification action.
+  - `handleCancel()`: Cancels the modification process and returns to the previous view.
+
 ---
+
+
+## FXML Files and Descriptions
+
+### AddDepartement.fxml
+This file defines the user interface for adding a new department:
+
+- **Features**:
+  - Contains a form for entering department details, such as the department name.
+  - Includes buttons for saving the new department or canceling the action.
+  - Validates input fields before submission.
+
+---
+
+### AddProfessor.fxml
+This file defines the user interface for adding a new professor:
+
+- **Features**:
+  - Provides a form to input professor details such as name, CIN, address, email, phone, recruitment date, and department.
+  - Includes dropdowns or selection fields for assigning a professor to a department.
+  - Has buttons for saving the new professor or canceling the action.
+
+---
+
+### DepartementViews.fxml
+This file represents the main interface for managing departments:
+
+- **Features**:
+  - Displays a list of all departments in a table or grid view.
+  - Includes options for viewing, editing, and deleting departments.
+  - May include a search or filter functionality for easier navigation.
+
+---
+
+
+### ListProfessorDepartement.fxml
+This file provides a view of professors associated with specific departments:
+
+- **Features**:
+  - Displays professors grouped or filtered by their department.
+  - Allows the user to view details of each professor.
+  - May include options for actions such as assigning or removing professors from a department.
+
+---
+
+### MainView.fxml
+This file defines the main interface of the application:
+
+- **Features**:
+  - Contains a `TabPane` or similar layout for navigation between different sections (e.g., Professors, Departments).
+  - Acts as a container for other views, allowing seamless transitions between tabs or modules.
+  - Includes common elements like menus, toolbars, or status bars.
+
+---
+
+### ModifyDepartement.fxml
+This file represents the interface for modifying an existing department:
+
+- **Features**:
+  - Displays the current details of the department to be edited.
+  - Provides fields for modifying attributes such as the department name.
+  - Includes buttons for saving changes or canceling the operation.
+
+---
+
+### ModifyProfessor.fxml
+This file defines the user interface for modifying the details of an existing professor:
+
+- **Features**:
+  - Displays the current information of the professor for editing.
+  - Allows modification of attributes such as name, email, phone, department, etc.
+  - Includes options for saving changes or canceling the action.
+
+---
+
+### ProfesseurViews.fxml
+This file is the main view for managing professors:
+
+- **Features**:
+  - Displays a list of all professors in a table or grid format.
+  - Includes options for actions like adding, editing, deleting, and searching for professors.
+  - Provides filtering or sorting options for organizing the list.
+
+---
+
+### SearchProfessor.fxml
+This file provides a dedicated interface for searching professors:
+
+- **Features**:
+  - Includes a search bar or form for entering keywords or filters.
+  - Displays search results in a list or table format.
+  - Supports advanced search options, such as filtering by department or recruitment date.
+
+---
+## Application
+
+### Professor Management
+The application provides comprehensive management features for professors:
+
+- **Complete CRUD operations**: Create, Read, Update, and Delete professors.
+- **Search functionality**: Quickly find professors by name, CIN, or department.
+- **Department assignment**: Assign professors to specific departments seamlessly.
+- **Date picker for recruitment date**: User-friendly input for selecting recruitment dates.
+- **Input validation**: Ensures accurate and valid data entry.
+
+---
+
+### Department Management
+Manage academic departments with ease:
+
+- **CRUD operations**: Create, Read, Update, and Delete departments.
+- **View associated professors**: See all professors belonging to a department.
+- **Automatic table updates**: Reflects real-time changes to department data.
+- **Validation checks**: Ensures valid department details before saving.
+
+---
+
+### Database Integration
+Robust integration with the database ensures reliable operations:
+
+- **Uses JDBC for database operations**: Interacts with the database efficiently.
+- **Implements connection pooling**: Optimizes database connections for better performance.
+- **Transaction management**: Ensures consistency in database operations.
+- **Prepared statements for security**: Protects against SQL injection attacks.
+
+---
+
+### User Interface
+A clean and responsive user interface for enhanced user experience:
+
+- **Clean and intuitive design**: Simplified navigation and user-friendly layout.
+- **Responsive layout**: Adapts seamlessly to different screen sizes.
+- **Form validation**: Ensures required fields are filled correctly before submission.
+- **Interactive tables**: Allows sorting, filtering, and selecting rows dynamically.
+- **Modal dialogs for operations**: Provides pop-ups for adding, editing, or deleting records without leaving the main page.
+
+---
+
