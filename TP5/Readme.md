@@ -85,8 +85,8 @@ The `Professor` class represents a professor with various attributes:
 ### Department
 The `Department` class represents a department within the institution:
 
-- **id**: Unique identifier for the department.
-- **nom**: Name of the department.
+- **id**
+- **nom**
 
 ---
 ## Controller Documentation
@@ -384,4 +384,26 @@ A clean and responsive user interface for enhanced user experience:
 - **Modal dialogs for operations**: Provides pop-ups for adding, editing, or deleting records without leaving the main page.
 
 ---
+## HelloApplication Class
+
+The `HelloApplication` class serves as the starting point for our JavaFX application. By extending the `Application` class from the JavaFX library, it leverages the framework designed for creating rich graphical user interfaces in Java.
+
+### Key Components
+
+- **start(Stage stage)**: This method is a crucial part of the application lifecycle and is automatically invoked when the application is launched. Its responsibilities include:
+  - **Loading the FXML File**: The class utilizes the `MainView.fxml` file to define the layout and structure of the main user interface. FXML allows developers to design the UI in an XML format, promoting a clean separation between design and application logic.
+  - **Creating the Scene**: Within this method, a new `Scene` object is created, serving as the primary container for all UI components displayed within the application window.
+  - **Setting the Window Title**: The title of the application window is set to "Gestion des Professeurs," giving users a clear indication of the application's purpose.
+  - **Showing the Application Window**: Finally, the application window is presented to the user by calling `stage.show()`, making the interface interactive.
+
+### Application Flow
+
+1. **Initiation via main() Method**: The application starts execution from the `main()` method, where `Application.launch(args)` is called to initiate the JavaFX runtime, which handles the application’s lifecycle.
+   
+2. **Invocation of start() Method**: Once the JavaFX environment is ready, it automatically calls the `start()` method, allowing developers to configure the user interface.
+
+3. **Main View with TabPane**: 
+   - The main interface features a `TabPane`, which organizes different functionalities of the application:
+     - **Professors Management Tab**: This tab allows users to manage professor-related tasks, including adding, viewing, modifying, and deleting professor records.
+     - **Departments Management Tab**: This tab enables users to handle department information, including creating and updating departments, as well as viewing associated professors.
 
