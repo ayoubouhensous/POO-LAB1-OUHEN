@@ -9,9 +9,13 @@ Ce projet est une application de bureau développée en JavaFX qui permet de gé
 1. [Introduction](#introduction)
 2. [Technologies Utilisées](#technologies-utilisées)
 3. [Fonctionnalités](#fonctionnalités)
-4. [Ui](#Ui)
-5. [Utilisation](#utilisation)
-6. [Conclusion](#conclusion)
+4. [Interface](#Interface)
+5. [Models](#Models)
+6. [Controller ](#Controller )
+7. [FXML](#FXML)
+8. [MainApplication](#MainApplication)
+9. [Utilisation](#utilisation)
+10. [Conclusion](#conclusion)
 
 ---
 
@@ -50,7 +54,7 @@ JavaFX est une plateforme puissante pour créer des applications de bureau moder
    - Messages d'erreur et de confirmation pour guider l'utilisateur.
 
 ---
-## Ui
+## Interface
 ![show prof](https://github.com/user-attachments/assets/229c054b-2db5-45cf-854d-02f615b2c01c)
 
 ![add prof](https://github.com/user-attachments/assets/7e6ac551-cdc2-4453-9394-be7f7e250022)
@@ -89,7 +93,7 @@ The `Department` class represents a department within the institution:
 - **nom**
 
 ---
-## Controller Documentation
+## Controller 
 
 ## MainController
 The `MainController` is responsible for managing the main application window and navigation:
@@ -249,7 +253,7 @@ The `ModifyDepartementController` manages the modification of existing departmen
 ---
 
 
-## FXML Files and Descriptions
+## FXML 
 
 ### AddDepartement.fxml
 This file defines the user interface for adding a new department:
@@ -384,7 +388,7 @@ A clean and responsive user interface for enhanced user experience:
 - **Modal dialogs for operations**: Provides pop-ups for adding, editing, or deleting records without leaving the main page.
 
 ---
-## HelloApplication Class
+## MainApplication 
 
 The `HelloApplication` class serves as the starting point for our JavaFX application. By extending the `Application` class from the JavaFX library, it leverages the framework designed for creating rich graphical user interfaces in Java.
 
