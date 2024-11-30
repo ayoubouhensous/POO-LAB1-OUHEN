@@ -53,3 +53,18 @@ JavaFX est une plateforme puissante pour créer des applications de bureau moder
 ## Ui
 ![show prof](https://github.com/user-attachments/assets/229c054b-2db5-45cf-854d-02f615b2c01c)
 
+![add prof](https://github.com/user-attachments/assets/7e6ac551-cdc2-4453-9394-be7f7e250022)
+
+![modifyprof](https://github.com/user-attachments/assets/87e5c152-28e5-47c7-b8c9-1b4dffb38d43)
+
+![depart to prof](https://github.com/user-attachments/assets/d557e13f-b7c0-4b43-89d2-d419ecbb13d0)
+
+![show departement](https://github.com/user-attachments/assets/202a2104-4524-4c05-b6e4-2c3bdfc2fab4)
+
+![add departement](https://github.com/user-attachments/assets/f448e998-faf6-4d99-8655-a83088ca60a2)
+
+![modifydep](https://github.com/user-attachments/assets/c3bc9095-a46e-4060-ac2d-d67253c566b1)
+
+![listprofdep](https://github.com/user-attachments/assets/0425fefc-3826-4100-a6bc-16c1041cd2a7)
+
+
