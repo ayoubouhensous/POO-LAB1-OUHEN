@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="482.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProfessorController">
+  <children>
+
+    <!-- Search Bar -->
+    <HBox layoutY="17.0" prefHeight="43.0" prefWidth="580.0" spacing="10" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.0">
+      <children>
+        <TextField fx:id="searchField" prefHeight="19.0" prefWidth="149.0" promptText="Search professors..." />
+        <Button fx:id="searchButton" text="Search" />
+      </children>
+    </HBox>
+
+
+
+    <TableView fx:id="professorsTable" layoutY="53.0" prefHeight="305.0" prefWidth="580.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="53.0">
+      <columns>
+        <TableColumn fx:id="idColumn" text="ID" />
+        <TableColumn fx:id="nameColumn" text="Name" />
+        <TableColumn fx:id="emailColumn" prefWidth="141.0" text="Email" />
+        <TableColumn fx:id="cinColumn" prefWidth="88.0" text="Cin" />
+        <TableColumn fx:id="numColumn" prefWidth="109.0" text="Tel" />
+        <TableColumn fx:id="departmentColumn" prefWidth="124.0" text="Department" />
+        <TableColumn fx:id="actionColumn" prefWidth="217.0" text="Actions" />
+
+      </columns>
+    </TableView>
+
+    <HBox spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+      <children>
+        <Button fx:id="addprofessortButton" text="Add Professor" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

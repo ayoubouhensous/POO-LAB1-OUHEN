@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controllers.MainController"
+      prefHeight="600.0" prefWidth="800.0">
+
+    <MenuBar>
+        <Menu text="Professor and Departement Management System">
+            <MenuItem text="Exit" onAction="#handleExit"/>
+        </Menu>
+    </MenuBar>
+
+    <TabPane fx:id="mainTabPane" VBox.vgrow="ALWAYS">
+        <tabs>
+            <Tab fx:id="professorsTab" text="Professors" closable="false">
+                <content>
+                    <fx:include source="ProfesseurViews.fxml"/>
+                </content>
+            </Tab>
+            <Tab fx:id="departmentsTab" text="Departments" closable="false">
+                <content>
+                    <fx:include source="DepartementViews.fxml"/>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>

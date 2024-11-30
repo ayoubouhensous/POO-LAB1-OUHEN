@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddProfessorController">
+
+    <children>
+        <VBox alignment="CENTER" layoutX="20.0" layoutY="30.0" prefHeight="350.0" prefWidth="560.0" spacing="10" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+            <children>
+                <Label text="Add New Professor" />
+                <TextField fx:id="nameField" promptText="Name" />
+                <TextField fx:id="LastnameField" promptText="LastName" />
+                <TextField fx:id="cinField" promptText="cin" />
+                <TextField fx:id="adressField" promptText="Adresse" />
+                <TextField fx:id="numColumn" promptText="Tel" />
+                <DatePicker fx:id="dateField" promptText="Date" />
+                <TextField fx:id="emailField" promptText="Email" />
+
+                <HBox spacing="10">
+                    <children>
+                        <Button fx:id="okButton" text="OK" onAction="#handleAddProfessor" />
+                        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
