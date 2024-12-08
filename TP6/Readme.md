@@ -159,7 +159,193 @@ public class ContactManager {
         scanner.close();
     }
 }
-java```
+```
+
+
+### Exercise 3: Product Management
+
+This exercise involves managing a list of products and clients and their details, with persistence using a file.
+
+1. Menu of Options
+The user can:
+
+Add a product-client.
+Search for a product,client.
+Display all products,clients.
+2. Persistence with File
+The data is stored in a binary file using serialization.
+
+```java
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Product implements Serializable {
+    private String name;
+    private double price;
+
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product: " + name + ", Price: " + price;
+    }
+}
+
+public class ProductManager {
+    private static final String FILE_NAME = "products.dat";
+
+    public static void main(String[] args) {
+        List<Product> products = loadProducts();
+        Scanner scanner = new Scanner(System.in);
+
+        boolean running = true;
+        while (running) {
+            System.out.println("1. Add a product");
+            System.out.println("2. Search for a product");
+            System.out.println("3. Display all products");
+            System.out.println("4. Exit");
+            System.out.print("Choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Product name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Product price: ");
+                    double price = scanner.nextDouble();
+                    products.add(new Product(name, price));
+                    saveProducts(products);
+                    System.out.println("Product added.");
+                    break;
+                case 2:
+                    System.out.print("Product name to search: ");
+                    String searchName = scanner.nextLine();
+                    products.stream()
+                            .filter(p -> p.toString().contains(searchName))
+                            .forEach(System.out::println);
+                    break;
+                case 3:
+                    products.forEach(System.out::println);
+                    break;
+                case 4:
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
+        }
+        scanner.close();
+    }
+
+    private static List<Product> loadProducts() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
+            return (List<Product>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            return new ArrayList<>();
+        }
+    }
+
+    private static void saveProducts(List<Product> products) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            oos.writeObject(products);
+        } catch (IOException e) {
+            System.out.println("Error while saving products.");
+        }
+    }
+}
+```
+
+```java
+import java.util.List;
+import java.util.Scanner;
+
+public class ApplicationClients {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        MetierClientImpl metierClient = new MetierClientImpl(" clients.dat");
+
+        int choix;
+        do {
+            System.out.println("Menu Clients:");
+            System.out.println("1. Afficher la liste des clients.");
+            System.out.println("2. Rechercher un client par son nom.");
+            System.out.println("3. Ajouter un nouveau client.");
+            System.out.println("4. Supprimer un client par nom.");
+            System.out.println("5. Sauvegarder les clients.");
+            System.out.println("6. Quitter.");
+            System.out.print("Votre choix: ");
+            choix = scanner.nextInt();
+            scanner.nextLine(); // Consommer la nouvelle ligne
+
+            switch (choix) {
+                case 1:
+                    List<Client> clients = metierClient.getAll();
+                    clients.forEach(System.out::println);
+                    break;
+                case 2:
+                    System.out.print("Entrez le nom du client: ");
+                    String nomClient = scanner.nextLine();
+                    Client client = metierClient.findByNom(nomClient);
+                    if (client != null) {
+                        System.out.println(client);
+                    } else {
+                        System.out.println("Client non trouvé.");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Nom: ");
+                    String nom = scanner.nextLine();
+                    System.out.print("Prénom: ");
+                    String prenom = scanner.nextLine();
+                    System.out.print("Adresse: ");
+                    String adresse = scanner.nextLine();
+                    System.out.print("Téléphone: ");
+                    String tel = scanner.nextLine();
+                    System.out.print("Email: ");
+                    String email = scanner.nextLine();
+                    metierClient.add(new Client(nom, prenom, adresse, tel, email));
+                    System.out.println("Client ajouté.");
+                    break;
+                case 4:
+                    System.out.print("Entrez le nom du client à supprimer: ");
+                    String nomASupprimer = scanner.nextLine();
+                    metierClient.delete(nomASupprimer);
+                    System.out.println("Client(s) supprimé(s).");
+                    break;
+                case 5:
+                    metierClient.saveAll();
+                    System.out.println("Clients sauvegardés.");
+                    break;
+                case 6:
+                    System.out.println("Au revoir !");
+                    break;
+                default:
+                    System.out.println("Choix invalide. Veuillez réessayer.");
+            }
+        } while (choix != 6);
+
+        scanner.close();
+    }
+}
+```
+
+### Conclusion
+Through these exercises, we explored file handling, data persistence, and basic user interaction in Java. These tasks demonstrate how Java can manage and manipulate data efficiently for practical applications.
+
+
+
+
+
+
+
+
+
 
 
 
