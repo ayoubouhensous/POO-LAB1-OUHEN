@@ -86,7 +86,83 @@ public class DirectoryLister {
     }
 }
 
+java```
+
+
+### Exercise 2: Contact Management
+
+This exercise focuses on managing a contact directory using files for persistence.
+
+1. Menu of Options
+The user can:
+
+Add a contact.
+Search for a contact.
+Update a contact.
+Delete a contact.
+2. Adding and Updating
+Contacts are stored in files named after their names, with their phone numbers as content.
+
 ```java
+import java.io.*;
+import java.util.Scanner;
+
+public class ContactManager {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
+
+        while (running) {
+            System.out.println("1. Add a contact");
+            System.out.println("2. Search for a contact");
+            System.out.println("3. Update a contact");
+            System.out.println("4. Delete a contact");
+            System.out.println("5. Exit");
+            System.out.print("Choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Phone number: ");
+                    String number = scanner.nextLine();
+                    try (FileWriter writer = new FileWriter("contacts/" + name + ".txt")) {
+                        writer.write(number);
+                        System.out.println("Contact added.");
+                    } catch (IOException e) {
+                        System.out.println("Error while adding contact.");
+                    }
+                    break;
+                case 2:
+                    System.out.print("Name: ");
+                    name = scanner.nextLine();
+                    File file = new File("contacts/" + name + ".txt");
+                    if (file.exists()) {
+                        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                            System.out.println("Phone number: " + reader.readLine());
+                        } catch (IOException e) {
+                            System.out.println("Error while reading contact.");
+                        }
+                    } else {
+                        System.out.println("Contact not found.");
+                    }
+                    break;
+                case 5:
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
+        }
+        scanner.close();
+    }
+}
+java```
+
+
+
 
 
 
