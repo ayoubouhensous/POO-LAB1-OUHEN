@@ -86,7 +86,7 @@ public class DirectoryLister {
     }
 }
 
-java```
+```
 
 
 ### Exercise 2: Contact Management
