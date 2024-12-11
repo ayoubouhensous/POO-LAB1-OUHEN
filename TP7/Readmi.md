@@ -47,7 +47,7 @@ To run the exercises, simply execute the corresponding Java class files. Each cl
 
 ## Exercises
 
-### Exercise 1: Displaying Messages with Threads
+### Exercise 1: Exercise 1: Displaying Messages with Threads
 
 In this exercise, we created 10 threads. Each thread prints a message containing its number 100 times. The threads run independently and display messages in a random order depending on the execution order of the threads.
 
@@ -109,7 +109,7 @@ The main() method is the entry point of the program. Here's what happens inside:
 
 
 
-### Exercise 2: Summing Array Elements with Threads
+### Exercise 2: Exercise 2: Summing Array Elements with Threads
 
 In this exercise, we created multiple threads to compute the sum of elements in an array. The array is divided into segments, and each thread is responsible for summing a specific segment. After all threads finish, the results are combined to get the final sum.
 
