@@ -16,8 +16,8 @@ This project focuses on the implementation of arrays and strings in Java. It con
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Exercises](#exercises)
-   - [Exercise 1: Exercise 1:Displaying Messages with Threads](#exercise-1:Displaying-Messages-with-Threads)
-   - [Exercise 2: Exercise 2:Summing Array Elements with Threads](#exercise-2:Summing-Array-Elements-with-Threads)
+   - [Exercise 1: Exercise 1: Displaying Messages with Threads](#exercise-1:Displaying-Messages-with-Threads)
+   - [Exercise 2: Exercise 2: Summing Array Elements with Threads](#exercise-2:Summing-Array-Elements-with-Threads)
 6. [Conclusion](#Conclusion)
 
 ### Introduction
