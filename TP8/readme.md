@@ -2,7 +2,7 @@
 # TP8 : Sockets en Java
 
 This project focuses on socket programming in Java, implementing two exercises that demonstrate client-server communication. The first exercise involves a guessing game, and the second exercise involves file transfer.
-=
+
 
 ## Overview
 This project illustrates the use of sockets in Java to enable communication between a server and clients. It includes:
